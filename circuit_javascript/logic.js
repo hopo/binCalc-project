@@ -1,39 +1,64 @@
-module.exports = logic;
-
 function AND(ia, ib){
+	var and;
 	if(ia === 1 && ib === 1){
-		return 1;
+		and = 1;
 	}else{
-		return 0;
-	}	
+		and = 0;
+	};
+	return and;
 };	
 
 function OR(ia, ib){
+	var or;
 	if(ia === 0 && ib === 0){
-		return 0;
+		or = 0;
 	}else{
-		return 1;
-	}	
+		or = 1;
+	};
+	return or;	
 };
 
 function NAND(ia, ib){
+	var nand;
 	if(ia === 1 && ib === 1){
-		return 0;
+		nand = 0;
 	}else{
-		return 1;
-	}	
+		nand = 1;
+	};
+	return nand;
 };
 
 function NOR(ia, ib){
 	if(ia === 0 && ib === 0){
-		return 1;
+		nor = 1;
 	}else{
-		return 0;
-	}	
+		nor = 0;
+	};
+	return nor;
 };
 
-// var and = AND()
-// 	,or = OR()
-// 	,nand = NAND()
-// 	,nor = NOR()
-// 	,xor = AND(or, nand);
+function XOR(ia, ib){
+	var or = OR(ia, ib);
+	var nand = NAND(ia, ib);
+	var xor = AND(or, nand);
+	return xor;
+};
+
+function set(ia, ib){
+	console.log('('+ia+', '+ib+')');
+	console.log('AND : ', AND(ia, ib));
+	console.log('OR  : ', OR(ia, ib));
+	console.log('NAND: ', NAND(ia, ib));
+	console.log('NOR : ', NOR(ia, ib));
+	console.log('XOR : ', XOR(ia, ib));
+};
+
+module.exports={
+	AND : AND,
+	OR : OR,
+	NAND : NAND,
+	NOR : NOR,
+	XOR : XOR,
+	set : set
+
+}
