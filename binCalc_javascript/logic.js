@@ -1,40 +1,33 @@
 function AND(ia, ib){
-	var and;
 	if(ia === 1 && ib === 1){
-		and = 1;
+		return 1;
 	}else{
-		and = 0;
-	};
-	return and;
-};	
+		return 0;
+	};	return and;
+};
 
 function OR(ia, ib){
-	var or;
 	if(ia === 0 && ib === 0){
-		or = 0;
+		return 0;
 	}else{
-		or = 1;
+		return 1;
 	};
-	return or;	
 };
 
 function NAND(ia, ib){
-	var nand;
 	if(ia === 1 && ib === 1){
-		nand = 0;
+		return 0;
 	}else{
-		nand = 1;
+		return 1;
 	};
-	return nand;
 };
 
 function NOR(ia, ib){
 	if(ia === 0 && ib === 0){
-		nor = 1;
+		return 1;
 	}else{
-		nor = 0;
+		return 0;
 	};
-	return nor;
 };
 
 function XOR(ia, ib){
