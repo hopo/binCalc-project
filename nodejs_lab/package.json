@@ -1,0 +1,29 @@
+{
+  "name": "nodejs_lab",
+  "version": "1.0.0",
+  "description": "reliant on nodejs_ot",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hopo/appot_project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hopo/appot_project/issues"
+  },
+  "homepage": "https://github.com/hopo/appot_project#readme",
+  "dependencies": {
+    "body-parser": "^1.16.1",
+    "express": "^4.14.1",
+    "express-mysql-session": "^1.2.0",
+    "express-session": "^1.15.1",
+    "jade": "^1.11.0",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0",
+    "pbkdf2-password": "^1.2.1"
+  }
+}

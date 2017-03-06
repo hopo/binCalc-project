@@ -1,0 +1,23 @@
+doctype html
+html
+	head
+		title layout jade
+		meta(charset='utf-8')
+		meta(name='viewport' content='width=device-width,initial-scale=1')
+	body
+		header
+			ul#account
+				if user
+					a(href='/auth/logout') Logout
+					=user.displayName
+				else
+					a(href='/auth/login') Login
+					a(href='/auth/register') Register
+
+			h1 
+				a(href='/topic') HelloProgramming
+			ul
+				each topic in topics
+					li
+						a(href='/topic/'+topic.id)=topic.title
+			block content
