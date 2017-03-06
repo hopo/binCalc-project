@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<ul id="myList">
+  <li id="myLI">Coffee</li>
+</ul>
+
+<p>Click one button to remove the li element from ul. Click the other button to insert the removed li element to ul.</p>
+
+<button onclick="removeLi()">Remove li</button>
+<button onclick="appendLi()">Insert li</button>
+
+<script>
+var item = document.getElementById("myLI");
+
+function removeLi() {
+    item.parentNode.removeChild(item);
+}
+
+function appendLi() {
+    var list = document.getElementById("myList");
+    list.appendChild(item);
+}
+</script>
+
+</body>
+</html>

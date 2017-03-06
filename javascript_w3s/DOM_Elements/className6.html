@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.mystyle {
+    width: 500px;
+    height: 50px;
+    border: 1px solid black;
+    margin-bottom: 10px;
+}
+
+.anotherClass {
+    background-color: coral;
+    text-align: center;
+    font-size: 25px;
+    color: white;
+}
+</style>
+</head>
+<body>
+
+<p>Click the button to add an additional class to the div element.</p>
+
+<div id="myDIV" class="mystyle">
+I am a DIV element
+</div>
+
+<button onclick="myFunction()">Try it</button>
+
+<script>
+function myFunction() {
+    document.getElementById("myDIV").className += " anotherClass";
+}
+</script>
+
+</body>
+</html>

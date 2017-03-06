@@ -1,0 +1,29 @@
+<!-- *attribute는 HTML에서 tag name으로는 부족한 부가적인 정보라고 할 수 있다.
+속성을 제어하는 API는 아래와 같다.
+    Element.getAttribute(name)
+    Element.setAttribute(name, value)
+    Element.hasAttribute(name);
+    Element.removeAttribute(name) -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<a id="target" href="http://opentutorials.org">opentutorials</a>
+
+<script>
+var t = document.getElementById('target');
+console.log(t.getAttribute('href')); // http://opentutorials.org
+
+t.setAttribute('title', 'opentutorials.org'); // title 속성의 값을 설정한다.
+console.log(t.hasAttribute('title')); // true, title 속성의 존재여부를 확인한다.
+
+t.removeAttribute('title'); // title 속성을 제거한다.
+console.log(t.hasAttribute('title')); // false, title 속성의 존재여부를 확인한다.
+</script>
+	
+</body>
+</html>

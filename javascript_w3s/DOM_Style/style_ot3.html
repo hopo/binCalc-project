@@ -1,0 +1,42 @@
+<!-- view port -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<style>
+    body{
+        padding:0;
+        margin:0;
+    }
+    div{
+        border:50px solid #1065e6;
+        padding:50px;
+        margin:50px;
+    }
+    #target{
+        width:100px;
+        height:2000px;
+    }
+</style>
+    <div>
+        <div id="target">
+            Coding
+        </div>
+    </div>
+ 
+<script>
+    var t = document.getElementById('target');
+    setInterval(function(){
+        console.log('getBoundingClientRect : ', t.getBoundingClientRect().top, 'pageYOffset:', window.pageYOffset);
+    }, 1000)
+</script>
+
+</body>
+</html>
+
+
+<!-- *이를 통해서 알 수 있는 것은 getBoundingClientRect의 값이 스크롤에 따라서 달라지는 뷰포트의 좌표를 사용하고 있다는 것이다. 또한 스크롤의 정도를 알고 싶을 때는 pageYOffset을 사용하면 된다는 것도 알 수 있다. 
+ -->

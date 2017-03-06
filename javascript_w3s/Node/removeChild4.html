@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<ul><li>Coffee</li><li id="myLI">Tea</li><li>Milk</li></ul>
+
+<p>Click the button to remove the li element with id="myLI" from the list.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<script>
+function myFunction() {
+    var item = document.getElementById("myLI");
+    item.parentNode.removeChild(item);
+}
+</script>
+
+</body>
+</html>

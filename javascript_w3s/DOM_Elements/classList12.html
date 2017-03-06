@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.mystyle {
+    width: 300px;
+    height: 50px;
+    background-color: coral;
+    color: white;
+    font-size: 25px;
+}
+</style>
+</head>
+<body>
+
+<h2>Cross-browser solution for classList.add()</h2>
+<p>The classList property is not supported in Internet Explorer 9 and earlier.</p>
+<p>In this example, we check if the browser supports the classList.add() method. If not, use the className property instead to achieve the same result (for IE9 and earlier).</p>
+
+<p>Click the button to add the class "mystyle" to the DIV element.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<div id="myDIV">
+I am a DIV element
+</div>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+    var x = document.getElementById("myDIV");
+
+    if (x.classList) { 
+        x.classList.add("mystyle");
+    } else {
+        x.className = "mystyle";
+    }
+}
+</script>
+
+</body>
+</html>
+

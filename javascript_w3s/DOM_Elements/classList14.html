@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.mystyle {
+    width: 300px;
+    height: 50px;
+    background-color: coral;
+    color: white;
+    font-size: 25px;
+}
+</style>
+</head>
+<body>
+
+<h2>Cross-browser solution for classList.contains()</h2>
+<p>The classList property is not supported in Internet Explorer 9 and earlier.</p>
+<p>In this example, we check if the browser supports the classList.contains() method. If not, the regular expression works as a fallback to achieve the same result (for IE 9 and earlier).</p>
+
+<p>Click the button to find out if the DIV element has a "mystyle" class.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<div id="myDIV" class="mystyle">
+I am a DIV element
+</div>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+    var x = document.getElementById("myDIV");
+
+    if (x.classList) {
+        alert(x.classList.contains("mystyle"));
+    } else {
+        alert(/\bmystyle\b/g.test(x.className));
+    }
+}
+</script>
+
+</body>
+</html>

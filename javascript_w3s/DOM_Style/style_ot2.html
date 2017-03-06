@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<style>
+    body{
+        padding:0;
+        margin:0;
+    }
+    div{
+        border:50px solid #1065e6;
+        padding:50px;
+        margin:50px;
+    }
+    #target{
+        width:100px;
+        height:100px;
+    }
+</style>
+<div>
+    <div id="target">
+        Coding
+    </div>
+</div>
+
+<script>
+    var t = document.getElementById('target');
+    console.log(t.getBoundingClientRect());
+    console.log(t.offsetParent);
+</script>
+
+</body>
+</html>
+
+<!-- *테두리를 제외한 엘리먼트의 크기를 알고 싶다면  console에서 ClientWidth, ClientHeight
+ -->

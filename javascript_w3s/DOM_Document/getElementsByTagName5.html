@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>An unordered list:</p>
+<ul>
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Milk</li>
+</ul>
+
+<p>Click the button to display the innerHTML of the UL element (index 3).</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+    var x = document.getElementsByTagName("*"); // "*":all elements in the document
+    document.getElementById("demo").innerHTML = x[3].innerHTML;
+}
+</script>
+
+</body>
+</html>

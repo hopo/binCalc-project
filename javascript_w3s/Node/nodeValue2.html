@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the button get the node name, node type and node value of the div's first child.</p>
+
+<div id="myDIV">This is a div element.</div>
+<br>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+    var x = document.getElementById("myDIV").firstChild;
+    var txt = "";
+    txt += "The node name: " + x.nodeName + "<br>";
+    txt += "The node value: " + x.nodeValue + "<br>";
+    txt += "The node type: " + x.nodeType;
+    document.getElementById("demo").innerHTML = txt;
+}
+</script>
+
+</body>
+</html>

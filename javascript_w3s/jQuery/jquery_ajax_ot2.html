@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<p>time : <span id="time"></span></p>
+<form>
+    <select name="timezone">
+        <option value="Asia/Seoul">asia/seoul</option>
+        <option value="America/New_York">America/New_York</option>
+    </select>
+    <select name="format">
+        <option value="Y-m-d H:i:s">Y-m-d H:i:s</option>
+        <option value="Y-m-d">Y-m-d</option>
+    </select>
+</form>
+<input type="button" id="execute" value="execute" />
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script>
+    $('#execute').click(function(){
+        $.ajax({
+            url:'./time2.php',
+            type:'post',
+            data:$('form').serialize(),
+            success:function(data){
+                $('#time').text(data);
+            }
+        })
+    })
+</script>
+	
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!-- multiple bindinf -->
+<!-- 하나의 엘리먼트에 여러개의 이벤트 타입을 동시에 등록하는 방법을 알아보자. 
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<input type="text" id="target" />
+<p id="status"></p>
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script>
+    $('#target').on('focus blur', function(e){
+        $('#status').html(e.type);
+    })
+</script>
+	
+</body>
+</html>
+
+<!-- 한번에 여러개의 이벤트 타입을 선택했다. 만약 이벤트에 따라서 다른 핸들러를 실행하고 싶다면 next와 같이 코드를 변경한다. -->

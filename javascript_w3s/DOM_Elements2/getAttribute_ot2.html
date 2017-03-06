@@ -1,0 +1,19 @@
+<!-- *심지어 attribute와 property는 값이 다를수도 있다. 아래 코드를 실행한 결과는 속성과 프로퍼티의 값이 꼭 같은 것은 아니라는 것을 보여준다. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<a id="target" href="./demo1.html">ot</a>
+
+<script>
+var t = document.getElementById('target');
+ 
+console.log('target.href', t.href); // http://localhost/webjs/Element/attribute_api/demo1.html
+console.log('target.getAttribute("href")', t.getAttribute("href")); // ./demo1.html 
+</script>	
+</body>
+</html>

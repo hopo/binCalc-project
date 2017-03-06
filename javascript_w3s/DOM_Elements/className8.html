@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.mystyle {
+    background-color: aqua;
+    padding: 30px;
+}
+
+.mystyle2 {
+    background-color: coral;
+    padding: 50px;
+}
+</style>
+</head>
+<body>
+
+<p>Click the button multiple times to toggle between two class names for DIV.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<div id="myDIV" class="mystyle">
+I am a DIV element
+</div>
+
+<script>
+function myFunction() {
+    var x = document.getElementById("myDIV");
+    if (x.className === "mystyle") {
+        x.className = "mystyle2";
+    } else {
+        x.className = "mystyle";
+    }
+}
+</script>
+
+</body>
+</html>

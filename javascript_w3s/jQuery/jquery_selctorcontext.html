@@ -1,0 +1,29 @@
+<ul>
+    <li class="marked">html</li>
+    <li>css</li>
+    <li id="active">JavaScript
+        <ul>
+            <li>JavaScript Core</li>
+            <li class="marked">DOM</li>
+            <li class="marked">BOM</li>
+        </ul>
+    </li>
+</ul>
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script>
+    $( ".marked", "#active").css( "background-color", "red" );
+</script>
+
+<!-- <ul>
+    <li class="marked">html</li>
+    <li>css</li>
+    <li id="active">JavaScript
+        <ul>
+            <li>JavaScript Core</li>
+            <li class="marked" style="background-color: red;">DOM</li>
+            <li class="marked" style="background-color: red;">BOM</li>
+        </ul>
+    </li>
+</ul> -->
+
+<!-- $( "#active .marked").css( "background-color", "red" ); -->
