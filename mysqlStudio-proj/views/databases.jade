@@ -1,0 +1,12 @@
+html
+head
+	meta(chareset="utf-8")
+	title databases page
+body
+	h2= "DB User: "+dbUser
+	h1 'SHOW databases'
+	ul
+		each db in dbs
+			li
+				a(href="/#{dbUser}/"+db.Database)= db.Database
+	h1 'ALTER database'

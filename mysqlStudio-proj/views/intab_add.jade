@@ -1,0 +1,17 @@
+//- dbName, tabName
+
+html
+head
+	meta(charaset="utf-8")
+body
+	h1
+		a(href="/#{dbName}/#{tabName}")= "Table: "+tabName
+	form(action="/#{dbName}/#{tabName}/add" method="post")
+		div
+			input(type='text' name='title' placeholder='title' autofocus)
+		div
+			textarea(name='description' placeholder='description')
+		div
+			input(type='submit' value='Add')
+			input(type='reset')
+			a(href="/#{dbName}/#{tabName}") cancel

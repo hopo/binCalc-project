@@ -1,0 +1,14 @@
+extends ./layout
+block content
+	article
+		if topic
+			h2= topic.title
+			=topic.description
+			div= 'by '+topic.author
+			ul
+				a(href='/topic/add') Add
+				a(href='/topic/'+topic.id+'/edit') Edit
+				a(href='/topic/'+topic.id+'/delete') Delete
+		else
+			ul
+				a(href='/topic/add') Add

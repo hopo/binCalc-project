@@ -1,0 +1,11 @@
+html
+head
+    meta(charset="utf-8")
+    title
+body
+    h1 test query string jade
+    form(action="/qstr")
+        div database name?
+        input(type="text" name="dbName" value="o2")
+        input(type="submit")
+    p= dbn

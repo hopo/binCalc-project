@@ -1,0 +1,13 @@
+//- dbName, tabs, fields
+
+html
+head
+	meta(charset="utf-8")
+body
+	h1= "DB: "+dbName
+	
+	div 'SHOW tables'
+		ul
+			each tab in tabs
+				li
+					a(href="/#{dbName}/"+tab.Tables_in_o2)= tab.Tables_in_o2

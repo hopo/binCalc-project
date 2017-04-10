@@ -1,0 +1,60 @@
+//- dbName, tabName
+//- qrys, qry0
+
+html
+head
+	meta(charset="utf-8")
+body
+	h2
+		a(href="/#{dbName}")= "DB: "+dbName
+	h1
+		a(href="/#{dbName}/#{tabName}")= "Table: "+tabName
+	ul
+		each qry in qrys
+			li
+				a(href="/#{dbName}/#{tabName}/"+qry.id)= qry.title
+	if qry0
+		h2= qry0.title
+		h3= qry0.description
+		div
+			a(href='/#{dbName}/#{tabName}/add') add
+			a(href='/#{dbName}/#{tabName}/'+qry0.id+'/edit') edit
+			a(href='/#{dbName}/#{tabName}/'+qry0.id+'/delete') delete
+	else
+		div
+			a(href='/#{dbName}/#{tabName}/add') add
+		
+	//- if qry
+	//- 	h2= qry.title
+	//- 	= qry.description
+	//- 	ul
+	//- 		a(href='/#{tabName}/add') Add
+	//- 		a(href='/#{tabName}/'+qry.id+'/edit') Edit
+	//- 		a(href='/#{tabName}/'+qry.id+'/delete') Delete
+	//- else
+		
+
+
+	//- 
+	//- 
+	//- ul
+	//- 	li
+	//- 		a(href="/#{dbUser}/#{dbName}/#{tabName}?syntax=desc")= "DESC "+tabName
+	//- 	li
+	//- 		a(href="/#{dbUser}/#{dbName}/#{tabName}?syntax=alter")= "ALTER "+tabName
+	//- 
+	//- ol
+	//- 	li
+	//- 		a(href="/#{dbUser}/#{dbName}/#{tabName}?crud=c") INSERT INTO
+	//- 	li
+	//- 		a(href="/#{dbUser}/#{dbName}/#{tabName}?crud=r") SELECT * FROM
+	//- 	li
+	//- 		a(href="/#{dbUser}/#{dbName}/#{tabName}?crud=u") UPDATE
+	//- 	li
+	//- 		a(href="/#{dbUser}/#{dbName}/#{tabName}?crud=d") DELETE FROM
+
+	//- 
+	//- 	li C: 'INSERT INTO `tb` (col1, col2, col3) VALUES (val1,val2, val3)'
+	//- 	li R: 'SELECT * FROM `tab`'
+	//- 	li U: 'UPDATE `tb` SET col1=val1, col2=val2 WHERE id=id'
+	//- 	li D: 'DELETE FROM `tb` WHERE id=id'
