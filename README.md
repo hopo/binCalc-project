@@ -1,1 +1,1 @@
-# Hello! hpLib
+# Hello! hpJavaScript
