@@ -1,0 +1,13 @@
+doctype html
+html
+	head
+		meta(charset='utf-8')
+	body
+		form(action='/form_reciever' method='post')
+			p Title
+				input(type='text' name='title')
+			p Description
+				textarea(name='descr')
+				input(type='reset')
+			p
+				input(type='submit' value='SEND')

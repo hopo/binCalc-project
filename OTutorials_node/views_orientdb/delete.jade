@@ -1,0 +1,23 @@
+doctype html
+html
+	head
+		title add page
+		meta(charset='utf-8')
+	body
+		header
+			h1
+				a(href='/topic') VIEW LIST
+			ul
+				each topic in topics
+					li
+						- rid=encodeURIComponent(topic['@rid'])
+						a(href='/topic/'+rid)= topic.title
+
+		article
+			h1= topic.title+'. DELETE?'
+			- rid=encodeURIComponent(topic['@rid'])
+			form(action='/topic/'+rid+'/delete' method='post')
+				p 
+					input(type='submit' value='YES')
+					a(href='/topic/'+rid) cancel
+

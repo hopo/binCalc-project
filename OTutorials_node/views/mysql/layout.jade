@@ -1,0 +1,24 @@
+doctype html
+html
+	head
+		title layout jade
+		meta(charset='utf-8')
+		meta(name='viewport' content='width=device-width,initial-scale=1')
+	body
+		header
+			ul#account
+				if user
+					li
+						a(href='/auth/logout') Logout
+				else
+					li
+						a(href='/auth/register') Register
+					li
+						a(href='/auth/login') Login
+			h1 
+				a(href='/topic') T O P I C
+			ul
+				each topic in topics
+					li
+						a(href='/topic/'+topic.id)=topic.title
+			block content

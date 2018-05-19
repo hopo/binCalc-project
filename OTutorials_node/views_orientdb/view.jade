@@ -1,0 +1,32 @@
+doctype html
+html
+	head
+		title view page
+		meta(charset='utf-8')
+	body
+		header
+			h1
+				a(href='/topic') VIEW LIST
+			ul
+				each topic in topics
+					li
+						- rid=encodeURIComponent(topic['@rid'])
+						a(href='/topic/'+rid)= topic.title
+		article
+			if topic
+				h2= topic.title
+				= topic.description
+				div= 'by '+topic.author
+			else
+				h2 (title)
+				| (description) by (author)
+		footer
+			ul
+				li
+					a(href='/topic/add') >add<
+				if topic
+					- rid=encodeURIComponent(topic['@rid'])
+					li
+						a(href='/topic/'+rid+'/edit') >edit< 
+					li
+						a(href='/topic/'+rid+'/delete') >delete<

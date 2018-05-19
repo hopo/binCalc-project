@@ -1,0 +1,27 @@
+doctype html
+html
+	head
+		title read page
+		meta(charset='utf-8')
+	body
+		header
+			h1
+				a(href='/dbase') CITY. Where is.
+			ul
+				each list in _dbase
+					li
+						a(href='/dbase/'+list.title)= list.title
+		article
+			if _dbase2
+				h2= _dbase2.title
+				= _dbase2.description
+			else
+		footer
+			if _dbase2
+				p
+					a(href='/dbase/create')  create 
+					a(href='/dbase/'+_dbase2.title+'/update')  update 
+					a(href='/dbase/'+_dbase2.title+'/delete')  delete 
+			else
+				p
+					a(href='/dbase/create')  create 

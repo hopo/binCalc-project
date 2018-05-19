@@ -1,0 +1,8 @@
+extends ../layout
+block content
+	article
+		h2='Delete '+topic.title+'???'
+		form(action='/topic/'+topic.id+'/delete' method='post')
+			p
+				input(type='submit' value='DELETE')
+		a(href='/topic/'+topic.id) cancel
